@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     private float range = 467;
 
     public float speed = 500;
+    public GameObject projectile;
 
 
     // Start is called before the first frame update
@@ -35,7 +36,7 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKeyDown(fireKey))
         {
-            Debug.Log("KDP SHOOT");
+            Instantiate(projectile, transform.position, projectile.transform.rotation);
         }
     }
 
