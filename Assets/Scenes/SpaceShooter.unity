@@ -152,6 +152,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38e2a385dc101432ca5a6c567ede6391, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  star: {fileID: 170606680319762420, guid: 0a458c6df6d9a494ca95bfefb688bc28, type: 3}
+  backgroundRate: 0.25
+  gameIsActive: 1
 --- !u!4 &719804961
 Transform:
   m_ObjectHideFlags: 0
