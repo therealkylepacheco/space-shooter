@@ -23,4 +23,12 @@ public class ProjectileBehavior : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        string tag = other.gameObject.tag;
+        Debug.Log($"Projectile hit {tag}");
+
+        Destroy(gameObject);
+    }
 }
