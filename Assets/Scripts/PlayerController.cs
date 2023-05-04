@@ -88,4 +88,12 @@ public class PlayerController : MonoBehaviour
             return transform.position.y > (-1 * range);
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Asteroid"))
+        {
+            Debug.Log("Asteroid Collision");
+        }
+    }
 }
