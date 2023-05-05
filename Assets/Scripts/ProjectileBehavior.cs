@@ -23,4 +23,14 @@ public class ProjectileBehavior : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        // KDP update score here based on the tag
+
+        string tag = other.gameObject.tag;
+        Debug.Log($"Projectile hit {tag}");
+
+        Destroy(gameObject);
+    }
 }

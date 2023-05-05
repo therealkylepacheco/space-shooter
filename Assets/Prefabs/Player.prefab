@@ -301,6 +301,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4054267630496215485}
   - component: {fileID: 4054267630496215484}
+  - component: {fileID: 4577806741026540486}
+  - component: {fileID: 3050018074542276348}
+  - component: {fileID: 5802126342169224303}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -341,6 +344,45 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 500
   projectile: {fileID: 114194015481865694, guid: 7c61f896dddd44a2c87929ee42241d54, type: 3}
+--- !u!65 &4577806741026540486
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4054267630496215618}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.055538, y: 1.0427158, z: 0.9999996}
+  m_Center: {x: -1.4941509, y: -1.2593395, z: 0.00000026077032}
+--- !u!65 &3050018074542276348
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4054267630496215618}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.0405774, y: 1.5336218, z: 0.9999996}
+  m_Center: {x: 1.0992386, y: 0.010672634, z: 0.00000026077032}
+--- !u!65 &5802126342169224303
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4054267630496215618}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.991472, y: 0.9786639, z: 0.9999996}
+  m_Center: {x: -1.4727697, y: 1.2386656, z: 0.00000026077032}
 --- !u!1 &4054267630618542490
 GameObject:
   m_ObjectHideFlags: 0
