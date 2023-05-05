@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 2380975151322354884}
   - component: {fileID: 938481844961869070}
   - component: {fileID: -4956064057943547260}
+  - component: {fileID: -2427471121534927402}
+  - component: {fileID: -528745826866664519}
   m_Layer: 0
   m_Name: Asteroid
   m_TagString: Asteroid
@@ -60,8 +62,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 30.988747
-  m_Center: {x: 39.765373, y: 18.536037, z: 0}
+  m_Radius: 37.325966
+  m_Center: {x: 39.60695, y: 19.011303, z: 0}
 --- !u!54 &-4956064057943547260
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -78,6 +80,36 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-2427471121534927402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2380975151322354883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 148e00c2eb446417d971433f7fad041c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 500
+  lowerDomain: -1300
+--- !u!114 &-528745826866664519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2380975151322354883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0dea1546bc4e4a3aa5118ee7fe531b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  childAngleRange: 45
+  scale: 2
+  rotationSpeed: 5
+  childAsteroid: {fileID: 2380975151322354883}
 --- !u!1 &2380975151353069139
 GameObject:
   m_ObjectHideFlags: 0
@@ -89,7 +121,6 @@ GameObject:
   - component: {fileID: 2380975151353069140}
   - component: {fileID: 2380975151353069143}
   - component: {fileID: 2380975151353069142}
-  - component: {fileID: 2380975151353069141}
   m_Layer: 0
   m_Name: Chunk (1)
   m_TagString: Asteroid
@@ -162,19 +193,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &2380975151353069141
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2380975151353069139}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2380975151454180601
 GameObject:
   m_ObjectHideFlags: 0
@@ -186,7 +204,6 @@ GameObject:
   - component: {fileID: 2380975151454180602}
   - component: {fileID: 2380975151454180605}
   - component: {fileID: 2380975151454180604}
-  - component: {fileID: 2380975151454180603}
   m_Layer: 0
   m_Name: Chunk (3)
   m_TagString: Asteroid
@@ -259,19 +276,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &2380975151454180603
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2380975151454180601}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2380975151953730338
 GameObject:
   m_ObjectHideFlags: 0
@@ -283,7 +287,6 @@ GameObject:
   - component: {fileID: 2380975151953730339}
   - component: {fileID: 2380975151953730342}
   - component: {fileID: 2380975151953730341}
-  - component: {fileID: 2380975151953730340}
   m_Layer: 0
   m_Name: Chunk (9)
   m_TagString: Asteroid
@@ -356,19 +359,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &2380975151953730340
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2380975151953730338}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2380975152015900895
 GameObject:
   m_ObjectHideFlags: 0
@@ -380,7 +370,6 @@ GameObject:
   - component: {fileID: 2380975152015900880}
   - component: {fileID: 2380975152015900883}
   - component: {fileID: 2380975152015900882}
-  - component: {fileID: 2380975152015900881}
   m_Layer: 0
   m_Name: Chunk (4)
   m_TagString: Asteroid
@@ -453,19 +442,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &2380975152015900881
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2380975152015900895}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2380975152164521899
 GameObject:
   m_ObjectHideFlags: 0
@@ -477,7 +453,6 @@ GameObject:
   - component: {fileID: 2380975152164521900}
   - component: {fileID: 2380975152164521903}
   - component: {fileID: 2380975152164521902}
-  - component: {fileID: 2380975152164521901}
   m_Layer: 0
   m_Name: Chunk (2)
   m_TagString: Asteroid
@@ -550,19 +525,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &2380975152164521901
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2380975152164521899}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2380975152299728952
 GameObject:
   m_ObjectHideFlags: 0
@@ -574,7 +536,6 @@ GameObject:
   - component: {fileID: 2380975152299728953}
   - component: {fileID: 2380975152299728956}
   - component: {fileID: 2380975152299728955}
-  - component: {fileID: 2380975152299728954}
   m_Layer: 0
   m_Name: Hole
   m_TagString: Untagged
@@ -647,19 +608,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &2380975152299728954
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2380975152299728952}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2380975152410367229
 GameObject:
   m_ObjectHideFlags: 0
@@ -671,7 +619,6 @@ GameObject:
   - component: {fileID: 2380975152410367230}
   - component: {fileID: 2380975152410367217}
   - component: {fileID: 2380975152410367216}
-  - component: {fileID: 2380975152410367231}
   m_Layer: 0
   m_Name: Chunk (5)
   m_TagString: Asteroid
@@ -744,19 +691,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &2380975152410367231
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2380975152410367229}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2380975152429954969
 GameObject:
   m_ObjectHideFlags: 0
@@ -768,7 +702,6 @@ GameObject:
   - component: {fileID: 2380975152429954970}
   - component: {fileID: 2380975152429954973}
   - component: {fileID: 2380975152429954972}
-  - component: {fileID: 2380975152429954971}
   m_Layer: 0
   m_Name: Chunk
   m_TagString: Asteroid
@@ -841,19 +774,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &2380975152429954971
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2380975152429954969}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2380975152533803415
 GameObject:
   m_ObjectHideFlags: 0
@@ -865,7 +785,6 @@ GameObject:
   - component: {fileID: 2380975152533803400}
   - component: {fileID: 2380975152533803403}
   - component: {fileID: 2380975152533803402}
-  - component: {fileID: 2380975152533803401}
   m_Layer: 0
   m_Name: Hole (4)
   m_TagString: Untagged
@@ -938,19 +857,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &2380975152533803401
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2380975152533803415}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2380975152725762236
 GameObject:
   m_ObjectHideFlags: 0
@@ -962,7 +868,6 @@ GameObject:
   - component: {fileID: 2380975152725762237}
   - component: {fileID: 2380975152725762224}
   - component: {fileID: 2380975152725762239}
-  - component: {fileID: 2380975152725762238}
   m_Layer: 0
   m_Name: Chunk (6)
   m_TagString: Asteroid
@@ -1035,19 +940,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &2380975152725762238
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2380975152725762236}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2380975152798889674
 GameObject:
   m_ObjectHideFlags: 0
@@ -1059,7 +951,6 @@ GameObject:
   - component: {fileID: 2380975152798889675}
   - component: {fileID: 2380975152798889678}
   - component: {fileID: 2380975152798889677}
-  - component: {fileID: 2380975152798889676}
   m_Layer: 0
   m_Name: Chunk (8)
   m_TagString: Asteroid
@@ -1132,19 +1023,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &2380975152798889676
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2380975152798889674}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2380975152808923632
 GameObject:
   m_ObjectHideFlags: 0
@@ -1156,7 +1034,6 @@ GameObject:
   - component: {fileID: 2380975152808923633}
   - component: {fileID: 2380975152808923636}
   - component: {fileID: 2380975152808923635}
-  - component: {fileID: 2380975152808923634}
   m_Layer: 0
   m_Name: Hole (3)
   m_TagString: Untagged
@@ -1229,19 +1106,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &2380975152808923634
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2380975152808923632}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2380975152836040286
 GameObject:
   m_ObjectHideFlags: 0
@@ -1253,7 +1117,6 @@ GameObject:
   - component: {fileID: 2380975152836040287}
   - component: {fileID: 2380975152836040274}
   - component: {fileID: 2380975152836040273}
-  - component: {fileID: 2380975152836040272}
   m_Layer: 0
   m_Name: Chunk (7)
   m_TagString: Asteroid
@@ -1326,19 +1189,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &2380975152836040272
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2380975152836040286}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2380975152973287814
 GameObject:
   m_ObjectHideFlags: 0
@@ -1350,7 +1200,6 @@ GameObject:
   - component: {fileID: 2380975152973287815}
   - component: {fileID: 2380975152973287866}
   - component: {fileID: 2380975152973287865}
-  - component: {fileID: 2380975152973287864}
   m_Layer: 0
   m_Name: Hole (1)
   m_TagString: Untagged
@@ -1423,19 +1272,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &2380975152973287864
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2380975152973287814}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2380975153374658233
 GameObject:
   m_ObjectHideFlags: 0
@@ -1447,7 +1283,6 @@ GameObject:
   - component: {fileID: 2380975153374658234}
   - component: {fileID: 2380975153374658237}
   - component: {fileID: 2380975153374658236}
-  - component: {fileID: 2380975153374658235}
   m_Layer: 0
   m_Name: Hole (2)
   m_TagString: Untagged
@@ -1520,19 +1355,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &2380975153374658235
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2380975153374658233}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2380975153428415104
 GameObject:
   m_ObjectHideFlags: 0
@@ -1544,7 +1366,6 @@ GameObject:
   - component: {fileID: 2380975153428415105}
   - component: {fileID: 2380975153428415108}
   - component: {fileID: 2380975153428415107}
-  - component: {fileID: 2380975153428415106}
   m_Layer: 0
   m_Name: Hole (5)
   m_TagString: Untagged
@@ -1617,16 +1438,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &2380975153428415106
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2380975153428415104}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}

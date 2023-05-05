@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(SpawnStar());
+        StartCoroutine(SpawnStar()); // kdp add this back in
     }
 
     // Update is called once per frame

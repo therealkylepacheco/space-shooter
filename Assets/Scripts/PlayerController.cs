@@ -96,4 +96,9 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Asteroid Collision");
         }
     }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        Debug.Log("KDP");
+    }
 }
