@@ -15,6 +15,9 @@ public class PlayerController : MonoBehaviour
     private float domain = 1058;
     private float range = 467;
 
+    public float timeBetweenShots = 0.25f;
+    private float timestamp;
+
     public float speed = 500;
     public GameObject projectile;
 
@@ -22,7 +25,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        timestamp = Time.time;
     }
 
     // Update is called once per frame
@@ -34,9 +37,10 @@ public class PlayerController : MonoBehaviour
 
     void HandleFire()
     {
-        if (Input.GetKeyDown(fireKey))
+        if (Input.GetKeyDown(fireKey) && Time.time >= timestamp)
         {
             Instantiate(projectile, transform.position, projectile.transform.rotation);
+            timestamp = Time.time + timeBetweenShots;
         }
     }
 
