@@ -8,6 +8,9 @@ public class ShooterBehavior : MonoBehaviour
 
     public float health = 5;
 
+    private float domain = 1058;
+    private float range = 467;
+
     public Material damageMaterial;
     public Material defaultMaterial;
 
