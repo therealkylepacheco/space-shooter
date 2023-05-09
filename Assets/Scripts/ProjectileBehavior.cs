@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ProjectileBehavior : MonoBehaviour
 {
-    private float domain = 1265;
+    private float domain = 1400;
     public float speed = 1000;
 
     // Start is called before the first frame update
@@ -18,7 +18,7 @@ public class ProjectileBehavior : MonoBehaviour
     {
         // TODO: implement rotation
         transform.Translate(Vector3.right * Time.deltaTime * speed);
-        if (transform.position.x > domain)
+        if (Mathf.Abs(transform.position.x) > domain)
         {
             Destroy(gameObject);
         }
