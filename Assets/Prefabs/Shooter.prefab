@@ -426,6 +426,7 @@ GameObject:
   - component: {fileID: 1990647466042020528}
   - component: {fileID: 6421912627675588589}
   - component: {fileID: 9206659894685566513}
+  - component: {fileID: -4482057361449713783}
   m_Layer: 0
   m_Name: Shooter
   m_TagString: Shooter
@@ -484,6 +485,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 60.694046, y: 70.29722, z: 1}
   m_Center: {x: -0.23636627, y: -57.393955, z: 0}
+--- !u!114 &-4482057361449713783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3757263777916033140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e30bb4922e2574b6f87725480e094452, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 800
+  health: 5
+  damageMaterial: {fileID: 2100000, guid: bae00eafdc4ca4f939c7455fc69982c0, type: 2}
+  defaultMaterial: {fileID: 2100000, guid: ab520b1406c32442a83c57ddf73b6e2a, type: 2}
+  projectile: {fileID: 114194015481865694, guid: 7c61f896dddd44a2c87929ee42241d54, type: 3}
 --- !u!1 &4593224842863505123
 GameObject:
   m_ObjectHideFlags: 0

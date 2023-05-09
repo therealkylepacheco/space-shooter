@@ -11,10 +11,19 @@ public class ShooterBehavior : MonoBehaviour
     private float domain = 1058;
     private float range = 467;
 
+    private float domainMin = 600;
+
     public Material damageMaterial;
     public Material defaultMaterial;
 
+    private float timestamp;
+    public float timeBetweenShots = 0.5f;
+    public GameObject projectile;
+
     private GameObject player;
+
+    private float projectileOffsetX = -50;
+    private float projectileOffsetY = -50;
 
     // Start is called before the first frame update
     void Start()
@@ -25,10 +34,29 @@ public class ShooterBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Get direction to player
+        Vector3 directionToPlayer = (player.transform.position - transform.position).normalized;
 
-        // Vector3 directionToPlayer = (player.transform.position - transform.position).normalized;
+        // Move to position
+        if (transform.position.x > domainMin)
+        {
+            transform.Translate(directionToPlayer * speed * Time.deltaTime);
+        }
+        else
+        {
+            Fire();
+        }
+    }
 
-        // transform.Translate(directionToPlayer * speed * Time.deltaTime);
+    void Fire()
+    {
+        if (Time.time >= timestamp)
+        {
+            Quaternion q = new Quaternion(0, 0, 1, 0);
+            Vector3 spawnPos = new Vector3(transform.position.x + projectileOffsetX, transform.position.y + projectileOffsetY, transform.position.z);
+            Instantiate(projectile, spawnPos, q);
+            timestamp = Time.time + timeBetweenShots;
+        }
     }
 
     private void Damage()

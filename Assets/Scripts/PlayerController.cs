@@ -39,7 +39,8 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKeyDown(fireKey) && Time.time >= timestamp)
         {
-            Instantiate(projectile, transform.position, projectile.transform.rotation);
+            Vector3 spawnPos = new Vector3(transform.position.x + 80, transform.position.y, transform.position.z);
+            Instantiate(projectile, spawnPos, projectile.transform.rotation);
             timestamp = Time.time + timeBetweenShots;
         }
     }
