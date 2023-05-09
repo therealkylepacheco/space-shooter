@@ -2,11 +2,11 @@ using System;
 using System.Collections;
 using UnityEngine;
 
-public class ChaserBehavior : MonoBehaviour
+public class ShooterBehavior : MonoBehaviour
 {
-    public float speed = 400;
+    public float speed = 800;
 
-    public float health = 2;
+    public float health = 5;
 
     public Material damageMaterial;
     public Material defaultMaterial;
@@ -23,17 +23,18 @@ public class ChaserBehavior : MonoBehaviour
     void Update()
     {
 
-        Vector3 directionToPlayer = (player.transform.position - transform.position).normalized;
+        // Vector3 directionToPlayer = (player.transform.position - transform.position).normalized;
 
-        transform.Translate(directionToPlayer * speed * Time.deltaTime);
+        // transform.Translate(directionToPlayer * speed * Time.deltaTime);
     }
 
     private void Damage()
     {
+        Debug.Log("KDP DAMAGE");
         --health;
         if (health > 0)
         {
-            StartCoroutine(DamageEffect.Play(gameObject, 0, damageMaterial, defaultMaterial));
+            StartCoroutine(DamageEffect.Play(gameObject, 5, damageMaterial, defaultMaterial));
         }
         else
         {
