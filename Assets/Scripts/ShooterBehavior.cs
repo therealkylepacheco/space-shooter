@@ -34,13 +34,9 @@ public class ShooterBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Get direction to player
-        Vector3 directionToPlayer = (player.transform.position - transform.position).normalized;
-
-        // Move to position
         if (transform.position.x > domainMin)
         {
-            transform.Translate(directionToPlayer * speed * Time.deltaTime);
+            MoveToPosition();
         }
         else
         {
@@ -48,12 +44,22 @@ public class ShooterBehavior : MonoBehaviour
         }
     }
 
+    void MoveToPosition()
+    {
+        Vector3 directionToPlayer = (player.transform.position - transform.position).normalized;
+        transform.Translate(directionToPlayer * speed * Time.deltaTime);
+
+    }
+
     void Fire()
     {
         if (Time.time >= timestamp)
         {
-            Quaternion q = new Quaternion(0, 0, 1, 0);
             Vector3 spawnPos = new Vector3(transform.position.x + projectileOffsetX, transform.position.y + projectileOffsetY, transform.position.z);
+
+            Vector3 directionToPlayer = (player.transform.position - spawnPos).normalized;
+
+            Quaternion q = Quaternion.FromToRotation(Vector3.right, directionToPlayer);
             Instantiate(projectile, spawnPos, q);
             timestamp = Time.time + timeBetweenShots;
         }
@@ -61,7 +67,6 @@ public class ShooterBehavior : MonoBehaviour
 
     private void Damage()
     {
-        Debug.Log("KDP DAMAGE");
         --health;
         if (health > 0)
         {

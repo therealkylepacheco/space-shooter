@@ -501,6 +501,7 @@ MonoBehaviour:
   health: 5
   damageMaterial: {fileID: 2100000, guid: bae00eafdc4ca4f939c7455fc69982c0, type: 2}
   defaultMaterial: {fileID: 2100000, guid: ab520b1406c32442a83c57ddf73b6e2a, type: 2}
+  timeBetweenShots: 0.5
   projectile: {fileID: 114194015481865694, guid: 7c61f896dddd44a2c87929ee42241d54, type: 3}
 --- !u!1 &4593224842863505123
 GameObject:
@@ -528,8 +529,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4593224842863505123}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 17.5, y: -34.9, z: 0}
-  m_LocalScale: {x: 25, y: 25, z: 0.1}
+  m_LocalPosition: {x: 17.5, y: -35.0539, z: 0}
+  m_LocalScale: {x: 25, y: 25.3075, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1990647466042020528}
