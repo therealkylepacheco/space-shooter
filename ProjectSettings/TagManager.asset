@@ -7,6 +7,8 @@ TagManager:
   - Asteroid
   - Projectile
   - Chaser
+  - Shooter
+  - Harasser
   layers:
   - Default
   - TransparentFX
