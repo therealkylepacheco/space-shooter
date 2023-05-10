@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 4083192224050529519}
   - component: {fileID: 827735825316056276}
   - component: {fileID: 1177715485282547494}
+  - component: {fileID: -4763898544079990993}
   m_Layer: 0
   m_Name: Harasser
   m_TagString: Harasser
@@ -149,6 +150,29 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 35.806145
   m_Center: {x: 0, y: 0.22989655, z: 0}
+--- !u!114 &-4763898544079990993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1257985585555761299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 689816be9f22d4ec396522ea4213a892, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1200
+  health: 3
+  offsetWait: 250
+  offsetFire: 1000
+  damageMaterial: {fileID: 2100000, guid: bae00eafdc4ca4f939c7455fc69982c0, type: 2}
+  defaultMaterial: {fileID: 2100000, guid: ab520b1406c32442a83c57ddf73b6e2a, type: 2}
+  projectile: {fileID: 114194015481865694, guid: 7c61f896dddd44a2c87929ee42241d54, type: 3}
+  shotSpeed: 0.5
+  shotCount: 5
+  projectileOffset: 50
+  waitTime: 20
 --- !u!1 &1443011551399217060
 GameObject:
   m_ObjectHideFlags: 0
