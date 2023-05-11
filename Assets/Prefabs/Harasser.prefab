@@ -166,7 +166,7 @@ MonoBehaviour:
   damageMaterial: {fileID: 2100000, guid: bae00eafdc4ca4f939c7455fc69982c0, type: 2}
   defaultMaterial: {fileID: 2100000, guid: ab520b1406c32442a83c57ddf73b6e2a, type: 2}
   speed: 1200
-  health: 3
+  health: 7
   offsetWait: 250
   offsetFire: 1000
   shotSpeed: 0.5

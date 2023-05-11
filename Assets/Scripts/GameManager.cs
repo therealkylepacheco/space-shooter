@@ -31,6 +31,8 @@ public class GameManager : MonoBehaviour
     public GameObject shooter;
     private float shooterRate = 20;
 
+    private int adjustCount = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -99,7 +101,7 @@ public class GameManager : MonoBehaviour
 
             int enemyCount = chaserCount + shooterCount + harasserCount;
 
-            if (startWave /* && enemyCount === 0 */)
+            if (startWave)
             {
                 // kdp logic for kicking off new wave fires here
                 Debug.Log($"WAVE {waveCount} STARTING");
@@ -136,10 +138,18 @@ public class GameManager : MonoBehaviour
                 {
                     StopCoroutine(coroutine);
                 }
-                Debug.Log($"WAVE {waveCount} FINISHED"); // kdp display message
-                waveCount++;
-                cycle = 0;
-                startWave = true;
+
+                if (enemyCount == 0)
+                {
+                    Debug.Log($"WAVE {waveCount} FINISHED"); // kdp display message
+                    waveCount++;
+                    cycle = 0;
+                    startWave = true;
+                    if (waveCount > 3)
+                    {
+                        AdjustSpawnRates();
+                    }
+                }
             }
             else
             {
@@ -149,6 +159,29 @@ public class GameManager : MonoBehaviour
         }
 
 
+    }
+
+    void AdjustSpawnRates()
+    {
+
+        switch (adjustCount)
+        {
+            case 0:
+                asteroidRate *= 0.75f;
+                break;
+            case 1:
+                chaserRate *= 0.75f;
+                break;
+            case 2:
+                shooterRate *= 0.75f;
+                break;
+            case 3:
+                harasserRate *= 0.75f;
+                adjustCount = -1;
+                break;
+        }
+
+        adjustCount++;
     }
 
 

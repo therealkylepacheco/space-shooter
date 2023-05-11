@@ -98,12 +98,7 @@ public class PlayerController : MonoBehaviour
     {
         if (other.CompareTag("Asteroid"))
         {
-            Debug.Log("Asteroid Collision");
+            // Debug.Log("Asteroid Collision");
         }
-    }
-
-    private void OnCollisionEnter(Collision other)
-    {
-        Debug.Log("KDP");
     }
 }
