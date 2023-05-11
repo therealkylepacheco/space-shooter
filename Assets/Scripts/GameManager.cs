@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -33,6 +35,10 @@ public class GameManager : MonoBehaviour
 
     private int adjustCount = 0;
 
+
+    public int score = 0;
+    public TextMeshProUGUI scoreText;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -52,6 +58,7 @@ public class GameManager : MonoBehaviour
     {
         gameIsActive = true;
         startTime = Time.deltaTime;
+        scoreText.text = $"{score}";
         StartCoroutine(SpawnStar());
         StartCoroutine(GenerateWave(10));
     }
@@ -213,5 +220,25 @@ public class GameManager : MonoBehaviour
         Quaternion spawnRotation = asteroid.transform.rotation;
 
         return Instantiate(gameObj, spawnPosition, spawnRotation);
+    }
+
+
+    // SCORE
+    public void IncreaseScore(string tagHit)
+    {
+        switch (tagHit)
+        {
+            case "Asteroid":
+            case "Chaser":
+                score += 1;
+                break;
+            case "Shooter":
+                score += 2;
+                break;
+            case "Harasser":
+                score += 3;
+                break;
+        }
+        scoreText.text = $"{score}";
     }
 }
