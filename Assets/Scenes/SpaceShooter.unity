@@ -216,6 +216,10 @@ MonoBehaviour:
   star: {fileID: 170606680319762420, guid: 0a458c6df6d9a494ca95bfefb688bc28, type: 3}
   backgroundRate: 0.25
   gameIsActive: 1
+  asteroid: {fileID: 2380975151322354883, guid: 64fd9448b09904e6bb15808800f1301e, type: 3}
+  chaser: {fileID: 1149190437209534799, guid: 9fcae9c2aa33c45c2a5e17c4f31c237f, type: 3}
+  harasser: {fileID: 1257985585555761299, guid: b6d3aecf36a7445f9844ddc05fa5adc2, type: 3}
+  shooter: {fileID: 3757263777916033140, guid: a2b7c7cfc1ebd474ea22d9f869eeb9fc, type: 3}
 --- !u!4 &719804961
 Transform:
   m_ObjectHideFlags: 0
