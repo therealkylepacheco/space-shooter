@@ -23,9 +23,13 @@ public class GameManager : MonoBehaviour
     private float enemyRange = 467;
 
     public GameObject asteroid;
+    private float asteroidRate = 5;
     public GameObject chaser;
+    private float chaserRate = 10;
     public GameObject harasser;
+    private float harasserRate = 15;
     public GameObject shooter;
+    private float shooterRate = 20;
 
     // Start is called before the first frame update
     void Start()
@@ -93,28 +97,55 @@ public class GameManager : MonoBehaviour
         {
             yield return new WaitForSeconds(waveDelay);
 
-            if (startWave)
+            int enemyCount = chaserCount + shooterCount + harasserCount;
+
+            if (startWave /* && enemyCount === 0 */)
             {
                 // kdp logic for kicking off new wave fires here
                 Debug.Log($"WAVE {waveCount} STARTING");
 
+                float chaserSpawnRate = waveCount > 0 ? chaserRate : 0; // kdp need to calculate this
+                float shooterSpawnRate = waveCount > 1 ? shooterRate : 0;
+                float harasserSpawnRate = waveCount > 2 ? harasserRate : 0;
 
-                coroutines.Add(StartCoroutine(SpawnAsteroid(5)));
+
+                // always spawn asteroids
+                coroutines.Add(StartCoroutine(SpawnAsteroid(asteroidRate)));
+
+                if (chaserSpawnRate > 0)
+                {
+                    coroutines.Add(StartCoroutine(SpawnEnemy(chaserSpawnRate, chaser)));
+                }
+
+                if (shooterSpawnRate > 0)
+                {
+                    coroutines.Add(StartCoroutine(SpawnEnemy(shooterSpawnRate, shooter)));
+                }
+
+                if (harasserSpawnRate > 0)
+                {
+                    coroutines.Add(StartCoroutine(SpawnEnemy(harasserSpawnRate, harasser)));
+                }
+
+
                 startWave = false;
             }
-            else if (cycle > 5)
-            { //kdp arbitrary cycle count
+            else if (cycle > 4) // kdp arbitrary cycle count
+            {
                 foreach (Coroutine coroutine in coroutines)
                 {
                     StopCoroutine(coroutine);
                 }
-                Debug.Log($"WAVE {waveCount} FINISHED");
+                Debug.Log($"WAVE {waveCount} FINISHED"); // kdp display message
                 waveCount++;
                 cycle = 0;
                 startWave = true;
             }
-
-            cycle++;
+            else
+            {
+                Debug.Log($"KDP INCREMENT CYCLE TO {cycle + 1}");
+                cycle++; // kdp need to increment this ONLY IF wave is actively spawning (will need additional checks when enemy count is a factor)
+            }
         }
 
 
