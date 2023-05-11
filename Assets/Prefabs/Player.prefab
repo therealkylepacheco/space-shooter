@@ -343,7 +343,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0306e46a60964433f8f5d6cff4a82887, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBetweenShots: 0.25
+  timeBetweenShots: 0.2
   speed: 500
   projectile: {fileID: 114194015481865694, guid: 7c61f896dddd44a2c87929ee42241d54, type: 3}
 --- !u!65 &4577806741026540486

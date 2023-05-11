@@ -162,17 +162,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 689816be9f22d4ec396522ea4213a892, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  projectile: {fileID: 114194015481865694, guid: 7c61f896dddd44a2c87929ee42241d54, type: 3}
+  damageMaterial: {fileID: 2100000, guid: bae00eafdc4ca4f939c7455fc69982c0, type: 2}
+  defaultMaterial: {fileID: 2100000, guid: ab520b1406c32442a83c57ddf73b6e2a, type: 2}
   speed: 1200
   health: 3
   offsetWait: 250
   offsetFire: 1000
-  damageMaterial: {fileID: 2100000, guid: bae00eafdc4ca4f939c7455fc69982c0, type: 2}
-  defaultMaterial: {fileID: 2100000, guid: ab520b1406c32442a83c57ddf73b6e2a, type: 2}
-  projectile: {fileID: 114194015481865694, guid: 7c61f896dddd44a2c87929ee42241d54, type: 3}
   shotSpeed: 0.5
   shotCount: 5
   projectileOffset: 50
-  waitTime: 20
+  waitTime: 5
 --- !u!1 &1443011551399217060
 GameObject:
   m_ObjectHideFlags: 0

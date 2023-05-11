@@ -93,7 +93,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 500
-  lowerDomain: -1300
+  lowerDomain: -1500
 --- !u!114 &-528745826866664519
 MonoBehaviour:
   m_ObjectHideFlags: 0
