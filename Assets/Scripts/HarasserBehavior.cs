@@ -24,6 +24,7 @@ public class HarasserBehavior : MonoBehaviour
     private GameObject player;
     private bool firing = false;
     private bool waiting = true;
+    private bool arrivedWait = false;
 
     // Start is called before the first frame update
     void Start()
@@ -49,7 +50,7 @@ public class HarasserBehavior : MonoBehaviour
         Vector3 playerPosition = player.transform.position;
         Vector3 destination = new Vector3(playerPosition.x, playerPosition.y - offsetWait, playerPosition.z);
 
-        if (HasArrived(destination.x, transform.position.x))
+        if (HasArrived(destination.x, transform.position.x) && !arrivedWait)
         {
             StartCoroutine(Wait());
         }
@@ -96,11 +97,13 @@ public class HarasserBehavior : MonoBehaviour
         }
         firing = false;
         waiting = true;
+        arrivedWait = false;
         offsetWait *= -1;
     }
 
     IEnumerator Wait()
     {
+        arrivedWait = true;
         while (waiting)
         {
             yield return new WaitForSeconds(waitTime);

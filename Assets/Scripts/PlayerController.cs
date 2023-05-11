@@ -40,7 +40,9 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(fireKey) && Time.time >= timestamp)
         {
             Vector3 spawnPos = new Vector3(transform.position.x + 80, transform.position.y, transform.position.z);
-            Instantiate(projectile, spawnPos, projectile.transform.rotation);
+            GameObject projectileInstance = Instantiate(projectile, spawnPos, projectile.transform.rotation);
+            ProjectileBehavior projectileScript = projectileInstance.GetComponent<ProjectileBehavior>();
+            projectileScript.SetPlayerProjectile(true);
             timestamp = Time.time + timeBetweenShots;
         }
     }
@@ -98,12 +100,8 @@ public class PlayerController : MonoBehaviour
     {
         if (other.CompareTag("Asteroid"))
         {
-            Debug.Log("Asteroid Collision");
+            // Debug.Log("Asteroid Collision");
         }
-    }
-
-    private void OnCollisionEnter(Collision other)
-    {
-        Debug.Log("KDP");
+        // Destroy(gameObject);
     }
 }

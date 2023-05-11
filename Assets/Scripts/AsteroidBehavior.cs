@@ -19,9 +19,6 @@ public class AsteroidBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // kdp rotate asteroid?
-        // transform.Rotate(Vector3.forward * Time.deltaTime * rotationSpeed, Space.Self);
-        // transform.RotateAround(transform.position, Vector3.forward, Time.deltaTime * rotationSpeed);
     }
 
     public void SetScale(int newScale)

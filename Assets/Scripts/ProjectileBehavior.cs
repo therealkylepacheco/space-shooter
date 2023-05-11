@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class ProjectileBehavior : MonoBehaviour
 {
+    private bool playerProjectile = false;
     private float domain = 1400;
     public float speed = 1000;
+
+    private GameManager gameManager;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -24,12 +27,17 @@ public class ProjectileBehavior : MonoBehaviour
         }
     }
 
+    public void SetPlayerProjectile(bool isPlayerProjectile)
+    {
+        playerProjectile = isPlayerProjectile;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
-        // KDP update score here based on the tag
-
-        string tag = other.gameObject.tag;
-        Debug.Log($"Projectile hit {tag}");
+        if (playerProjectile)
+        {
+            gameManager.IncreaseScore(other.tag);
+        }
 
         Destroy(gameObject);
     }
