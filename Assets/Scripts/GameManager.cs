@@ -38,6 +38,7 @@ public class GameManager : MonoBehaviour
 
     public int score = 0;
     public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI advanceText;
 
     // Start is called before the first frame update
     void Start()
@@ -111,7 +112,7 @@ public class GameManager : MonoBehaviour
             if (startWave)
             {
                 // kdp logic for kicking off new wave fires here
-                Debug.Log($"WAVE {waveCount} STARTING");
+                advanceText.text = $"WAVE {waveCount} BEGIN";
 
                 float chaserSpawnRate = waveCount > 0 ? chaserRate : 0; // kdp need to calculate this
                 float shooterSpawnRate = waveCount > 1 ? shooterRate : 0;
@@ -148,7 +149,9 @@ public class GameManager : MonoBehaviour
 
                 if (enemyCount == 0)
                 {
-                    Debug.Log($"WAVE {waveCount} FINISHED"); // kdp display message
+                    advanceText.text = $"WAVE {waveCount} COMPLETE";
+                    advanceText.gameObject.SetActive(true);
+
                     waveCount++;
                     cycle = 0;
                     startWave = true;
@@ -161,6 +164,7 @@ public class GameManager : MonoBehaviour
             else
             {
                 Debug.Log($"KDP INCREMENT CYCLE TO {cycle + 1}");
+                advanceText.gameObject.SetActive(false);
                 cycle++; // kdp need to increment this ONLY IF wave is actively spawning (will need additional checks when enemy count is a factor)
             }
         }
