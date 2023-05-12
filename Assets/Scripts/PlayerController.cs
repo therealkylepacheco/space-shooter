@@ -27,6 +27,7 @@ public class PlayerController : MonoBehaviour
     public Material defaultMaterial;
     public bool vulnerable = true;
     public float damageCooldown = 2.5f;
+    private GameManager gameManager;
 
 
     // Start is called before the first frame update
@@ -34,6 +35,7 @@ public class PlayerController : MonoBehaviour
     {
         timestamp = Time.time;
         healthIcons = PopulateHealth();
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -138,8 +140,7 @@ public class PlayerController : MonoBehaviour
             else
             {
                 Destroy(gameObject);
-                // show game over
-                // restart game
+                gameManager.GameOver();
             }
 
         }
