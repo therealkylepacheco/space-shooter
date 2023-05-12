@@ -6,6 +6,7 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
+    public GameObject player;
     public GameObject star;
     public float backgroundRate = 0.25f;
 
@@ -39,11 +40,15 @@ public class GameManager : MonoBehaviour
     public int score = 0;
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI advanceText;
+    public GameObject menu;
+    public GameObject ui;
+    public GameObject pauseMenu;
 
     // Start is called before the first frame update
     void Start()
     {
-        StartGame();
+        StartCoroutine(SpawnStar());
+        // StartGame();
     }
 
     // Update is called once per frame
@@ -55,18 +60,26 @@ public class GameManager : MonoBehaviour
         shooterCount = GetShooterCount();
     }
 
-    void StartGame()
+    public void StartGame()
     {
         gameIsActive = true;
         startTime = Time.deltaTime;
         scoreText.text = $"{score}";
-        StartCoroutine(SpawnStar());
+        HideUI(menu);
+        ui.SetActive(true);
+        Instantiate(player);
         StartCoroutine(GenerateWave(10));
+    }
+
+    private void HideUI(GameObject uiElement)
+    {
+        MoveLeft move = uiElement.GetComponent<MoveLeft>();
+        move.speed = 500;
     }
 
     IEnumerator SpawnStar()
     {
-        while (gameIsActive)
+        while (true) // always want to run
         {
             yield return new WaitForSeconds(backgroundRate);
 
@@ -100,7 +113,7 @@ public class GameManager : MonoBehaviour
         bool startWave = true;
         List<Coroutine> coroutines = new List<Coroutine>();
 
-        int waveCount = 0;
+        int waveCount = 1;
         int cycle = 0;
 
         while (gameIsActive)
@@ -114,9 +127,9 @@ public class GameManager : MonoBehaviour
                 // kdp logic for kicking off new wave fires here
                 advanceText.text = $"WAVE {waveCount} BEGIN";
 
-                float chaserSpawnRate = waveCount > 0 ? chaserRate : 0; // kdp need to calculate this
-                float shooterSpawnRate = waveCount > 1 ? shooterRate : 0;
-                float harasserSpawnRate = waveCount > 2 ? harasserRate : 0;
+                float chaserSpawnRate = waveCount > 1 ? chaserRate : 0; // kdp need to calculate this
+                float shooterSpawnRate = waveCount > 2 ? shooterRate : 0;
+                float harasserSpawnRate = waveCount > 3 ? harasserRate : 0;
 
 
                 // always spawn asteroids
@@ -155,7 +168,7 @@ public class GameManager : MonoBehaviour
                     waveCount++;
                     cycle = 0;
                     startWave = true;
-                    if (waveCount > 3)
+                    if (waveCount > 4)
                     {
                         AdjustSpawnRates();
                     }
@@ -244,5 +257,17 @@ public class GameManager : MonoBehaviour
                 break;
         }
         scoreText.text = $"{score}";
+    }
+
+    public void PauseGame()
+    {
+        pauseMenu.SetActive(true);
+        Time.timeScale = 0;
+    }
+
+    public void ResumeGame()
+    {
+        pauseMenu.SetActive(false);
+        Time.timeScale = 1;
     }
 }
