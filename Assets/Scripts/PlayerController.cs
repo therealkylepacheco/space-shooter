@@ -20,12 +20,22 @@ public class PlayerController : MonoBehaviour
 
     public float speed = 500;
     public GameObject projectile;
+    public GameObject healthIcon;
+    public int health = 3;
+    private GameObject[] healthIcons;
+    public Material damageMaterial;
+    public Material defaultMaterial;
+    public bool vulnerable = true;
+    public float damageCooldown = 2.5f;
+    private GameManager gameManager;
 
 
     // Start is called before the first frame update
     void Start()
     {
         timestamp = Time.time;
+        healthIcons = PopulateHealth();
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -33,6 +43,19 @@ public class PlayerController : MonoBehaviour
     {
         HandleMovement();
         HandleFire();
+    }
+
+    private GameObject[] PopulateHealth()
+    {
+        GameObject[] temp = new GameObject[health];
+        for (int i = 0; i < health; i++)
+        {
+            Quaternion rotation = healthIcon.transform.rotation;
+            Vector3 originalPosition = healthIcon.transform.position;
+            Vector3 position = new Vector3(originalPosition.x + (i * 100), originalPosition.y, originalPosition.z);
+            temp[i] = Instantiate(healthIcon, position, rotation);
+        }
+        return temp;
     }
 
     void HandleFire()
@@ -98,10 +121,34 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Asteroid"))
+        Damage();
+    }
+
+    private void Damage()
+    {
+        if (vulnerable)
         {
-            // Debug.Log("Asteroid Collision");
+            --health;
+            if (health >= 0)
+            {
+                vulnerable = false;
+                GameObject currentHealthIcon = healthIcons[health];
+                Destroy(currentHealthIcon);
+                StartCoroutine(DamageEffect.Play(gameObject, 2, damageMaterial, defaultMaterial));
+                StartCoroutine(Invulnerable());
+            }
+            else
+            {
+                Destroy(gameObject);
+                gameManager.GameOver();
+            }
+
         }
-        // Destroy(gameObject);
+    }
+
+    IEnumerator Invulnerable()
+    {
+        yield return new WaitForSeconds(damageCooldown);
+        vulnerable = true;
     }
 }
