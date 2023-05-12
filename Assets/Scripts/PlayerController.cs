@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
 
     private KeyCode fireKey = KeyCode.Space;
 
-    private float domain = 1058;
+    private float domain = 840;
     private float range = 467;
 
     public float timeBetweenShots = 0.25f;

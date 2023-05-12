@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
 
     private float startTime;
 
-    private float enemyDomain = 1058;
+    private float enemyDomain = 1000;
     private float enemyRange = 467;
 
     public GameObject asteroid;

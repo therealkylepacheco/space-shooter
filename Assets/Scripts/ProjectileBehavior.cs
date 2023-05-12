@@ -5,7 +5,7 @@ using UnityEngine;
 public class ProjectileBehavior : MonoBehaviour
 {
     private bool playerProjectile = false;
-    private float domain = 1400;
+    private float domain = 1000;
     public float speed = 1000;
 
     private GameManager gameManager;
