@@ -404,7 +404,6 @@ GameObject:
   - component: {fileID: 204880557}
   - component: {fileID: 204880561}
   - component: {fileID: 204880560}
-  - component: {fileID: 204880559}
   - component: {fileID: 204880558}
   m_Layer: 0
   m_Name: Star(Clone) (4)
@@ -442,19 +441,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 500
   lowerDomain: -1300
---- !u!135 &204880559
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 204880556}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &204880560
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -516,7 +502,6 @@ GameObject:
   - component: {fileID: 207173641}
   - component: {fileID: 207173645}
   - component: {fileID: 207173644}
-  - component: {fileID: 207173643}
   - component: {fileID: 207173642}
   m_Layer: 0
   m_Name: Star(Clone) (6)
@@ -554,19 +539,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 500
   lowerDomain: -1300
---- !u!135 &207173643
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 207173640}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &207173644
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -628,7 +600,6 @@ GameObject:
   - component: {fileID: 256228236}
   - component: {fileID: 256228240}
   - component: {fileID: 256228239}
-  - component: {fileID: 256228238}
   - component: {fileID: 256228237}
   m_Layer: 0
   m_Name: Star(Clone) (13)
@@ -666,19 +637,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 500
   lowerDomain: -1300
---- !u!135 &256228238
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 256228235}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &256228239
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -740,7 +698,6 @@ GameObject:
   - component: {fileID: 272973699}
   - component: {fileID: 272973703}
   - component: {fileID: 272973702}
-  - component: {fileID: 272973701}
   - component: {fileID: 272973700}
   m_Layer: 0
   m_Name: Star(Clone) (15)
@@ -778,19 +735,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 500
   lowerDomain: -1300
---- !u!135 &272973701
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 272973698}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &272973702
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -852,7 +796,6 @@ GameObject:
   - component: {fileID: 275091784}
   - component: {fileID: 275091788}
   - component: {fileID: 275091787}
-  - component: {fileID: 275091786}
   - component: {fileID: 275091785}
   m_Layer: 0
   m_Name: Star(Clone) (19)
@@ -890,19 +833,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 500
   lowerDomain: -1300
---- !u!135 &275091786
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 275091783}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &275091787
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -964,7 +894,6 @@ GameObject:
   - component: {fileID: 279660306}
   - component: {fileID: 279660310}
   - component: {fileID: 279660309}
-  - component: {fileID: 279660308}
   - component: {fileID: 279660307}
   m_Layer: 0
   m_Name: Star(Clone) (12)
@@ -1002,19 +931,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 500
   lowerDomain: -1300
---- !u!135 &279660308
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 279660305}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &279660309
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1128,7 +1044,6 @@ GameObject:
   - component: {fileID: 329438530}
   - component: {fileID: 329438534}
   - component: {fileID: 329438533}
-  - component: {fileID: 329438532}
   - component: {fileID: 329438531}
   m_Layer: 0
   m_Name: Star(Clone)
@@ -1166,19 +1081,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 500
   lowerDomain: -1300
---- !u!135 &329438532
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 329438529}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &329438533
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1240,7 +1142,6 @@ GameObject:
   - component: {fileID: 337784249}
   - component: {fileID: 337784253}
   - component: {fileID: 337784252}
-  - component: {fileID: 337784251}
   - component: {fileID: 337784250}
   m_Layer: 0
   m_Name: Star(Clone) (5)
@@ -1278,19 +1179,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 500
   lowerDomain: -1300
---- !u!135 &337784251
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 337784248}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &337784252
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1352,7 +1240,6 @@ GameObject:
   - component: {fileID: 443035476}
   - component: {fileID: 443035480}
   - component: {fileID: 443035479}
-  - component: {fileID: 443035478}
   - component: {fileID: 443035477}
   m_Layer: 0
   m_Name: Star(Clone) (14)
@@ -1390,19 +1277,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 500
   lowerDomain: -1300
---- !u!135 &443035478
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 443035475}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &443035479
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1464,7 +1338,6 @@ GameObject:
   - component: {fileID: 444617098}
   - component: {fileID: 444617102}
   - component: {fileID: 444617101}
-  - component: {fileID: 444617100}
   - component: {fileID: 444617099}
   m_Layer: 0
   m_Name: Star(Clone) (8)
@@ -1502,19 +1375,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 500
   lowerDomain: -1300
---- !u!135 &444617100
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 444617097}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &444617101
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1576,7 +1436,6 @@ GameObject:
   - component: {fileID: 515997499}
   - component: {fileID: 515997503}
   - component: {fileID: 515997502}
-  - component: {fileID: 515997501}
   - component: {fileID: 515997500}
   m_Layer: 0
   m_Name: Star(Clone) (17)
@@ -1614,19 +1473,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 500
   lowerDomain: -1300
---- !u!135 &515997501
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 515997498}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &515997502
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1823,7 +1669,6 @@ GameObject:
   - component: {fileID: 690733994}
   - component: {fileID: 690733998}
   - component: {fileID: 690733997}
-  - component: {fileID: 690733996}
   - component: {fileID: 690733995}
   m_Layer: 0
   m_Name: Star(Clone) (11)
@@ -1861,19 +1706,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 500
   lowerDomain: -1300
---- !u!135 &690733996
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 690733993}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &690733997
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2127,7 +1959,6 @@ GameObject:
   - component: {fileID: 733400652}
   - component: {fileID: 733400656}
   - component: {fileID: 733400655}
-  - component: {fileID: 733400654}
   - component: {fileID: 733400653}
   m_Layer: 0
   m_Name: Star(Clone) (2)
@@ -2165,19 +1996,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 500
   lowerDomain: -1300
---- !u!135 &733400654
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 733400651}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &733400655
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2239,7 +2057,6 @@ GameObject:
   - component: {fileID: 748059903}
   - component: {fileID: 748059907}
   - component: {fileID: 748059906}
-  - component: {fileID: 748059905}
   - component: {fileID: 748059904}
   m_Layer: 0
   m_Name: Star(Clone) (16)
@@ -2277,19 +2094,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 500
   lowerDomain: -1300
---- !u!135 &748059905
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 748059902}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &748059906
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2351,7 +2155,6 @@ GameObject:
   - component: {fileID: 788293993}
   - component: {fileID: 788293997}
   - component: {fileID: 788293996}
-  - component: {fileID: 788293995}
   - component: {fileID: 788293994}
   m_Layer: 0
   m_Name: Star(Clone) (1)
@@ -2389,19 +2192,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 500
   lowerDomain: -1300
---- !u!135 &788293995
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 788293992}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &788293996
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2954,7 +2744,6 @@ GameObject:
   - component: {fileID: 1192144250}
   - component: {fileID: 1192144254}
   - component: {fileID: 1192144253}
-  - component: {fileID: 1192144252}
   - component: {fileID: 1192144251}
   m_Layer: 0
   m_Name: Star(Clone) (20)
@@ -2992,19 +2781,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 500
   lowerDomain: -1300
---- !u!135 &1192144252
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1192144249}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1192144253
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3120,7 +2896,6 @@ GameObject:
   - component: {fileID: 1216894445}
   - component: {fileID: 1216894449}
   - component: {fileID: 1216894448}
-  - component: {fileID: 1216894447}
   - component: {fileID: 1216894446}
   m_Layer: 0
   m_Name: Star(Clone) (18)
@@ -3158,19 +2933,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 500
   lowerDomain: -1300
---- !u!135 &1216894447
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1216894444}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1216894448
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3373,7 +3135,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
@@ -3529,7 +3291,6 @@ GameObject:
   - component: {fileID: 1356404557}
   - component: {fileID: 1356404561}
   - component: {fileID: 1356404560}
-  - component: {fileID: 1356404559}
   - component: {fileID: 1356404558}
   m_Layer: 0
   m_Name: Star(Clone) (9)
@@ -3567,19 +3328,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 500
   lowerDomain: -1300
---- !u!135 &1356404559
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1356404556}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1356404560
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3990,7 +3738,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ab520b1406c32442a83c57ddf73b6e2a, type: 2}
+  - {fileID: 2100000, guid: 0b159064a9fdd429aa3d067d3e7bff47, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4046,7 +3794,6 @@ GameObject:
   - component: {fileID: 1833037820}
   - component: {fileID: 1833037824}
   - component: {fileID: 1833037823}
-  - component: {fileID: 1833037822}
   - component: {fileID: 1833037821}
   m_Layer: 0
   m_Name: Star(Clone) (7)
@@ -4084,19 +3831,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 500
   lowerDomain: -1300
---- !u!135 &1833037822
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1833037819}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1833037823
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4158,7 +3892,6 @@ GameObject:
   - component: {fileID: 1860842215}
   - component: {fileID: 1860842219}
   - component: {fileID: 1860842218}
-  - component: {fileID: 1860842217}
   - component: {fileID: 1860842216}
   m_Layer: 0
   m_Name: Star(Clone) (3)
@@ -4196,19 +3929,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 500
   lowerDomain: -1300
---- !u!135 &1860842217
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1860842214}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1860842218
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4296,7 +4016,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 740, y: 340}
+  m_AnchoredPosition: {x: 816, y: 349}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1887823971
@@ -4404,7 +4124,6 @@ GameObject:
   - component: {fileID: 1919054697}
   - component: {fileID: 1919054701}
   - component: {fileID: 1919054700}
-  - component: {fileID: 1919054699}
   - component: {fileID: 1919054698}
   m_Layer: 0
   m_Name: Star(Clone) (10)
@@ -4442,19 +4161,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 500
   lowerDomain: -1300
---- !u!135 &1919054699
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1919054696}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1919054700
 MeshRenderer:
   m_ObjectHideFlags: 0
