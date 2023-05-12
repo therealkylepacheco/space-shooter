@@ -1,9 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class GameManager : MonoBehaviour
 {
@@ -65,6 +65,8 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
+        EventSystem.current.SetSelectedGameObject(null);
+
         gameIsActive = true;
         startTime = Time.deltaTime;
         scoreText.text = $"{score}";
