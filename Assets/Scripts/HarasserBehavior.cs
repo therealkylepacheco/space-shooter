@@ -29,7 +29,7 @@ public class HarasserBehavior : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.Find("Player");
+        player = GameObject.Find("Player(Clone)");
     }
 
     // Update is called once per frame

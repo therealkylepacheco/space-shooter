@@ -50,6 +50,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // Screen.SetResolution(1920, 1080, true);
         StartCoroutine(SpawnStar());
         // StartGame();
     }
@@ -73,13 +74,14 @@ public class GameManager : MonoBehaviour
         HideUI(menu);
         ui.SetActive(true);
         Instantiate(player);
-        StartCoroutine(GenerateWave(10));
+        StartCoroutine(GenerateWave(5));
     }
 
     private void HideUI(GameObject uiElement)
     {
         MoveLeft move = uiElement.GetComponent<MoveLeft>();
         move.speed = 500;
+        advanceText.gameObject.SetActive(true);
     }
 
     IEnumerator SpawnStar()
@@ -132,7 +134,7 @@ public class GameManager : MonoBehaviour
                 // kdp logic for kicking off new wave fires here
                 advanceText.text = $"WAVE {waveCount} BEGIN";
 
-                float chaserSpawnRate = waveCount > 1 ? chaserRate : 0; // kdp need to calculate this
+                float chaserSpawnRate = waveCount > 1 ? chaserRate : 0;
                 float shooterSpawnRate = waveCount > 2 ? shooterRate : 0;
                 float harasserSpawnRate = waveCount > 3 ? harasserRate : 0;
 
