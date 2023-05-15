@@ -10,8 +10,9 @@ public class HarasserBehavior : MonoBehaviour
 
     public float speed = 1200;
     public float health = 3;
-    public float offsetWait = 250;
-    public float offsetFire = 1000;
+    // public float offsetWait = 250;
+    public Vector3 offsetWait = new Vector3(0, 250, 0);
+    public Vector3 offsetFire = new Vector3(1000, 0, 0);
 
     public float shotSpeed = 0.5f;
 
@@ -25,11 +26,13 @@ public class HarasserBehavior : MonoBehaviour
     private bool firing = false;
     private bool waiting = true;
     private bool arrivedWait = false;
+    private Rigidbody rb;
 
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.Find("Player(Clone)");
+        // rb = gameObject.GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -48,32 +51,47 @@ public class HarasserBehavior : MonoBehaviour
     void MoveToWait()
     {
         Vector3 playerPosition = player.transform.position;
-        Vector3 destination = new Vector3(playerPosition.x, playerPosition.y - offsetWait, playerPosition.z);
+        Vector3 destination = player.transform.position - offsetWait;
 
         if (HasArrived(destination.x, transform.position.x) && !arrivedWait)
         {
             StartCoroutine(Wait());
         }
 
-        Vector3 direction = (destination - transform.position).normalized;
-
-        transform.Translate(direction * speed * Time.deltaTime);
+        if (arrivedWait)
+        {
+            // rb.MovePosition(destination);
+            transform.position = destination;
+        }
+        else
+        {
+            Vector3 direction = (destination - transform.position).normalized;
+            transform.Translate(direction * speed * Time.deltaTime);
+        }
     }
 
     void MoveToFire()
     {
         Vector3 playerPosition = player.transform.position;
-
-        Vector3 destination = new Vector3(playerPosition.x + offsetFire, playerPosition.y, playerPosition.z);
+        Vector3 destination = playerPosition + offsetFire;
 
         if (HasArrived(destination.y, transform.position.y) && !firing)
         {
             StartCoroutine(Fire(playerPosition));
         }
 
-        Vector3 direction = (destination - transform.position).normalized;
+        if (firing)
+        {
+            // rb.MovePosition(destination);
+            transform.position = destination;
+        }
+        else
+        {
 
-        transform.Translate(direction * speed * Time.deltaTime);
+            Vector3 direction = (destination - transform.position).normalized;
+
+            transform.Translate(direction * speed * Time.deltaTime);
+        }
     }
 
     IEnumerator Fire(Vector3 playerPosition)
@@ -113,7 +131,7 @@ public class HarasserBehavior : MonoBehaviour
 
     private bool HasArrived(float destination, float position)
     {
-        return Mathf.Abs(destination - position) <= 1;
+        return Mathf.Abs(destination - position) <= 5;
     }
 
 
